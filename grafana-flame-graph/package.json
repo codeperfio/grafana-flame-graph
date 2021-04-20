@@ -1,0 +1,28 @@
+{
+  "name": "codeperf-grafana-flame-graph",
+  "version": "1.0.0",
+  "description": "Flame graphs are a visualization of profiled software, allowing the most frequent code-paths to be identified quickly and accurately. This grafana plugin allows to visualize frequent code-paths over time. ",
+  "scripts": {
+    "build": "grafana-toolkit plugin:build",
+    "test": "grafana-toolkit plugin:test",
+    "dev": "grafana-toolkit plugin:dev",
+    "watch": "grafana-toolkit plugin:dev --watch",
+    "sign": "grafana-toolkit plugin:sign",
+    "start": "yarn watch"
+  },
+  "author": "codeperf",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@grafana/data": "latest",
+    "@grafana/toolkit": "latest",
+    "@grafana/runtime": "latest",
+    "@grafana/ui": "latest",
+    "@types/lodash": "latest"
+  },
+  "resolutions": {
+    "rxjs": "6.6.3"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}

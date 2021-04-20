@@ -1,0 +1,42 @@
+{
+  "$schema": "https://raw.githubusercontent.com/grafana/grafana/master/docs/sources/developers/plugins/plugin.schema.json",
+  "type": "datasource",
+  "name": "grafana-flame-graph",
+  "id": "codeperf-grafana-flame-graph",
+  "metrics": true,
+  "backend": true,
+  "executable": "gpx_grafana-flame-graph",
+  "info": {
+    "description": "Flame graphs are a visualization of profiled software, allowing the most frequent code-paths to be identified quickly and accurately. This grafana plugin allows to visualize frequent code-paths over time. ",
+    "author": {
+      "name": "codeperf",
+      "url": "https://codeperf.io"
+    },
+    "keywords": [
+      "performance",
+      "flame-graph",
+      "profiling"
+    ],
+    "logos": {
+      "small": "img/logo.svg",
+      "large": "img/logo.svg"
+    },
+    "links": [
+      {
+        "name": "Website",
+        "url": "https://github.com/grafana/grafana-starter-datasource-backend"
+      },
+      {
+        "name": "License",
+        "url": "https://github.com/grafana/grafana-starter-datasource-backend/blob/master/LICENSE"
+      }
+    ],
+    "screenshots": [],
+    "version": "%VERSION%",
+    "updated": "%TODAY%"
+  },
+  "dependencies": {
+    "grafanaDependency": ">=7.0.0",
+    "plugins": []
+  }
+}
