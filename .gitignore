@@ -30,7 +30,7 @@ coverage
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 dist/
 artifacts/
-node_modules/
+#node_modules/
 work/
 ci/
 e2e-results/
