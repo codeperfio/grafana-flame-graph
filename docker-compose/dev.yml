@@ -1,0 +1,28 @@
+version: '3.4'
+
+services:
+  redis:
+    image: redislabs/redismod:latest
+    ports:
+      - '6379:6379'
+    volumes:
+      - '../data:/data/:rw'
+
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - '3000:3000'
+    environment:
+      - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_AUTH_BASIC_ENABLED=false
+      - GF_ENABLE_GZIP=true
+      - GF_USERS_DEFAULT_THEME=light
+      - GF_PLUGINS_ALLOW_LOADING_UNSIGNED_PLUGINS=grafana-flame-graph
+      # Uncomment to run in debug mode
+      # - GF_LOG_LEVEL=debug
+    volumes:
+      - ../dist:/var/lib/grafana/plugins/grafana-flame-graph
+      - ../provisioning:/etc/grafana/provisioning
+      # Uncomment to preserve Grafana configuration
+      # - ./data:/var/lib/grafana

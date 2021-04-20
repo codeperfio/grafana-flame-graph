@@ -1,14 +1,18 @@
 {
-  "name": "codeperfio-grafana-flame-graph",
+  "name": "grafana-flame-graph",
   "version": "1.0.0",
   "description": "Flame graphs are a visualization of profiled software, allowing the most frequent code-paths to be identified quickly and accurately. This grafana plugin allows to visualize frequent code-paths over time. ",
   "scripts": {
     "build": "grafana-toolkit plugin:build",
+    "build:backend": "mage build:backend",
+    "format": "prettier --write \"**\"",
     "test": "grafana-toolkit plugin:test",
     "dev": "grafana-toolkit plugin:dev",
     "watch": "grafana-toolkit plugin:dev --watch",
     "sign": "grafana-toolkit plugin:sign",
-    "start": "yarn watch"
+    "start": "yarn watch",
+    "start:dev": "docker-compose -f docker-compose/dev.yml up",
+    "stop:dev": "docker-compose -f docker-compose/dev.yml down"
   },
   "author": "codeperfio",
   "license": "Apache-2.0",

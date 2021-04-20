@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/grafana/grafana/master/docs/sources/developers/plugins/plugin.schema.json",
   "type": "datasource",
   "name": "grafana-flame-graph",
-  "id": "codeperf-grafana-flame-graph",
+  "id": "grafana-flame-graph",
   "metrics": true,
   "backend": true,
   "executable": "gpx_grafana-flame-graph",
@@ -12,11 +12,7 @@
       "name": "codeperf",
       "url": "https://codeperf.io"
     },
-    "keywords": [
-      "performance",
-      "flame-graph",
-      "profiling"
-    ],
+    "keywords": ["performance", "flame-graph", "profiling"],
     "logos": {
       "small": "img/logo.svg",
       "large": "img/logo.svg"
