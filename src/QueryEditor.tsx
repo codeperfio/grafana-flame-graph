@@ -1,10 +1,10 @@
-import defaults from 'lodash/defaults';
+import defaults from "lodash/defaults";
 
-import React, { ChangeEvent, PureComponent } from 'react';
-import { LegacyForms } from '@grafana/ui';
-import { QueryEditorProps } from '@grafana/data';
-import { DataSource } from './datasource';
-import { defaultQuery, MyDataSourceOptions, MyQuery } from './types';
+import React, { ChangeEvent, PureComponent } from "react";
+import { LegacyForms } from "@grafana/ui";
+import { QueryEditorProps } from "@grafana/data";
+import { DataSource } from "./datasource";
+import { defaultQuery, MyDataSourceOptions, MyQuery } from "./types";
 
 const { FormField } = LegacyForms;
 
@@ -39,7 +39,7 @@ export class QueryEditor extends PureComponent<Props> {
         />
         <FormField
           labelWidth={8}
-          value={queryText || ''}
+          value={queryText || ""}
           onChange={this.onQueryTextChange}
           label="Query Text"
           tooltip="Not used yet"
